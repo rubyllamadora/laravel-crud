@@ -24,7 +24,7 @@
                             <td><a href="product/{!! $product->id !!}/edit"
                                    class="btn btn-outline-primary">Edit</a>
                                 <button type="button" class="btn btn-outline-danger ml-1"
-                                        onClick='showModel({!! $product->id !!})'>Delete</button></td>
+                                        onClick='showModal({!! $product->id !!})'>Delete</button></td>
                         </tr>
                     @empty
                         <tr>
@@ -37,14 +37,13 @@
         </div>
     </div>
 
-
     <div class="modal fade" id="deleteConfirmationModel" tabindex="-1" role="dialog"
          aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">Are you sure to delete this record?</div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" onClick="dismissModel()">Cancel</button>
+                    <button type="button" class="btn btn-default" onClick="dismissModal()">Cancel</button>
                     <form id="delete-frm" class="" action="" method="POST">
                         @method('DELETE')
                         @csrf
@@ -56,8 +55,8 @@
     </div>
 
     <script>
-        function showModel(id) {
-            var frmDelete = document.getElementById("delete-frm");
+        function showModal(id) {
+            const frmDelete = document.getElementById("delete-frm");
             frmDelete.action = 'product/'+id;
             var confirmationModal = document.getElementById("deleteConfirmationModel");
             confirmationModal.style.display = 'block';
@@ -65,8 +64,8 @@
             confirmationModal.classList.add('show');
         }
 
-        function dismissModel() {
-            var confirmationModal = document.getElementById("deleteConfirmationModel");
+        function dismissModal() {
+            const confirmationModal = document.getElementById("deleteConfirmationModel");
             confirmationModal.style.display = 'none';
             confirmationModal.classList.remove('show');
             confirmationModal.classList.add('fade');

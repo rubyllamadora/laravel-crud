@@ -11,3 +11,8 @@ All requests go to public/index.php
 
 ![image](https://user-images.githubusercontent.com/14160054/235581347-7981d5f6-2b7e-4fce-b8aa-ab67e6d40f6f.png)
 Image from https://phppot.com/php/php-laravel-project-example/
+
+
+## TODO
+### Convert Form to use Vue component
+### Continue with CRUD 

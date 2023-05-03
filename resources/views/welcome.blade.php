@@ -9,5 +9,9 @@
                 <a href="product" class="btn btn-outline-primary">Show Products</a>
             </div>
         </div>
+        <div class="row">
+            <p>Below is an example component</p>
+            <example-component></example-component>
+        </div>
     </div>
 @endsection

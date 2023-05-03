@@ -13,6 +13,14 @@ All requests go to public/index.php
 Image from https://phppot.com/php/php-laravel-project-example/
 
 
-## TODO
-### Convert Form to use Vue component
-### Continue with CRUD 
+## Installing Inertia
+https://laravel.com/docs/10.x/vite#inertia
+
+```
+composer require inertiajs/inertia-laravel
+php artisan inertia:middleware
+npm install @inertiajs/inertia @inertiajs/inertia-vue3
+php artisan serve
+```
+
+
